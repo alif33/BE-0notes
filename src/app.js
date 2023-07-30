@@ -27,7 +27,9 @@ app.use(cors());
 app.use(express.json());
 
 app.get("/", (req, res)=>{
-    console.log("hello req");
+    res.send({
+      message: `Server is running on port: ${process.env.PORT}`
+    })
 })
 
 app.use("/api", postRoutes);
