@@ -4,12 +4,11 @@ const app = express();
 const mongoose = require("mongoose");
 const cors = require("cors");
 
-const postRoutes = require("./routes/postRoutes");
-// const artistRoutes = require("../routes/artistRoutes");
-// const artRoutes = require("../routes/artRoutes");
-// const FFRoutes = require("../routes/FFRoutes");
+const post = require("./post/routes");
+const package = require("./package/routes");
 
-env.config();
+env.config(); 
+
 
 mongoose
   .connect(
@@ -30,11 +29,12 @@ app.get("/", (req, res)=>{
     res.send(`Server is running on port: ${process.env.PORT}`)
 })
 
-app.use("/api", postRoutes);
-// app.use("/api", artistRoutes);
-// app.use("/api", artRoutes);
-// app.use("/api", FFRoutes);
+app.use("/api", post);
+app.use("/api", package);
+
 
 app.listen(process.env.PORT, () => {
   console.log(`Server is running on port ${process.env.PORT}`);
 });
+
+
