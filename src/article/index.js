@@ -10,9 +10,11 @@ const schema = new mongoose.Schema(
       type: String,
       required: true
     },
+    snippets: {
+      type: String
+    },
     content: {
-      type: String,
-      required: true
+      type: String
     },
     packages: {
       type: mongoose.Schema.Types.ObjectId,
