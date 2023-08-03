@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
 
-const patternSchema = new mongoose.Schema(
+const schema = new mongoose.Schema(
   { 
     title: { 
       type: String,
@@ -16,10 +16,10 @@ const patternSchema = new mongoose.Schema(
     },
     packages: {
       type: mongoose.Schema.Types.ObjectId,
-      ref: "Package",
+      ref: "Package"
     },
   },
   { timestamps: true }
 );
 
-module.exports = mongoose.model("Pattern", patternSchema);
+module.exports = mongoose.model("Article", schema);

@@ -5,8 +5,8 @@ const {
     store
 } = require('./controller');
 
-router.get('/patterns', all);
-router.get('/pattern/:id', index);
-router.post('/pattern', store);
+router.get('/articles', all);
+router.get('/article/:id', index);
+router.post('/article', store);
 
 module.exports = router;
