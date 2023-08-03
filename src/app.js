@@ -4,7 +4,7 @@ const app = express();
 const mongoose = require("mongoose");
 const cors = require("cors");
 
-const post = require("./post/routes");
+const pattern = require("./pattern/routes");
 const package = require("./package/routes");
 
 env.config(); 
@@ -29,7 +29,7 @@ app.get("/", (req, res)=>{
     res.send(`Server is running on port: ${process.env.PORT}`)
 })
 
-app.use("/api", post);
+app.use("/api", pattern);
 app.use("/api", package);
 
 
