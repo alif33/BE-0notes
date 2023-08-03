@@ -16,6 +16,12 @@ const schema = new mongoose.Schema(
     content: {
       type: String
     },
+    modules: {
+      type: String
+    },
+    commands: {
+      type: String
+    },
     packages: {
       type: mongoose.Schema.Types.ObjectId,
       ref: "Package"
