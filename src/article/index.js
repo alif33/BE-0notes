@@ -10,16 +10,19 @@ const schema = new mongoose.Schema(
       type: String,
       required: true
     },
-    snippets: {
-      type: String
-    },
-    content: {
+    commands: {
       type: String
     },
     modules: {
       type: String
     },
-    commands: {
+    snippets: {
+      type: String
+    },
+    configuration: {
+      type: String
+    },
+    content: {
       type: String
     },
     packages: {

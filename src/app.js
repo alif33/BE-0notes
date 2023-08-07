@@ -5,7 +5,7 @@ const mongoose = require("mongoose");
 const cors = require("cors");
 
 const article = require("./article/routes");
-const package = require("./package/routes");
+const pattern = require("./pattern/routes");
 
 env.config(); 
 
@@ -30,7 +30,7 @@ app.get("/", (req, res)=>{
 })
 
 app.use("/api", article);
-app.use("/api", package);
+app.use("/api", pattern);
 
 
 app.listen(process.env.PORT, () => {

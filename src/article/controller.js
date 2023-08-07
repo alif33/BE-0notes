@@ -17,6 +17,7 @@ exports.store = async(req, res) => {
         category,
         commands,
         modules,
+        configuration,
         snippets,
         content
     } = req.body;
@@ -27,6 +28,7 @@ exports.store = async(req, res) => {
         commands,
         modules,
         snippets,
+        configuration,
         content
     })
 
@@ -48,6 +50,7 @@ exports.update = async(req, res) => {
         commands,
         modules,
         snippets,
+        configuration,
         content
     } = req.body;
 
@@ -57,6 +60,7 @@ exports.update = async(req, res) => {
         commands,
         modules,
         snippets,
+        configuration,
         content
     };
     
