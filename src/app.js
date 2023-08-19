@@ -6,9 +6,9 @@ const cors = require("cors");
 
 const article = require("./article/routes");
 const pattern = require("./pattern/routes");
+const project = require("./project/routes");
 
 env.config(); 
-
 
 mongoose
   .connect(
@@ -31,6 +31,7 @@ app.get("/", (req, res)=>{
 
 app.use("/api", article);
 app.use("/api", pattern);
+app.use("/api", project);
 
 
 app.listen(process.env.PORT, () => {
