@@ -3,6 +3,7 @@ const {
     index,
     all,
     store,
+    update
     // added,
     // removed
 } = require('./controller');
@@ -10,7 +11,7 @@ const {
 router.get('/project/:id', index);
 router.get('/projects', all);
 router.post('/project', store);
-// router.put('/pattern/added', added);
+router.put('/project', update);
 // router.put('/pattern/removed', removed);
 
 module.exports = router;

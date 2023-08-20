@@ -88,6 +88,5 @@ exports.removed = async(req, res) => {
         err,
         message: "Something went wrong",
     });
-
 }
 
