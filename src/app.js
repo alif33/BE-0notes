@@ -7,6 +7,7 @@ const cors = require("cors");
 const article = require("./article/routes");
 const pattern = require("./pattern/routes");
 const project = require("./project/routes");
+const task = require("./task/routes");
 
 env.config(); 
 
@@ -32,6 +33,7 @@ app.get("/", (req, res)=>{
 app.use("/api", article);
 app.use("/api", pattern);
 app.use("/api", project);
+app.use("/api", task);
 
 
 app.listen(process.env.PORT, () => {
