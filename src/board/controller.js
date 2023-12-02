@@ -11,12 +11,12 @@ const Model = require("./index");
 
 exports.index = async(req, res) => {
     const _id = req.params.id;
-    const data = await Model.findById(_id);
+    const data = await Model.findById(_id).populate("tasks");
     res.status(200).json({ data });
 };
 
 exports.all = async(req, res) => {
-    const data = await Model.find({});
+    const data = await Model.find({}).populate("tasks");
     res.status(200).json({ data });
 };
 

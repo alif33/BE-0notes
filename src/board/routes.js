@@ -6,9 +6,9 @@ const {
     update
 } = require('./controller');
 
-router.get('/task/:id', index);
-router.get('/tasks', all);
-router.post('/task', store);
-router.put('/task', update);
+router.get('/board/:id', index);
+router.get('/boards', all);
+router.post('/board', store);
+router.put('/board', update);
 
 module.exports = router;

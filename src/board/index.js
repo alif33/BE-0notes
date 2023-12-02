@@ -8,7 +8,7 @@ const schema = new mongoose.Schema(
     },
     tasks: [{
         type: mongoose.Schema.Types.ObjectId,
-        ref: "Article"
+        ref: "Task"
     }],
     content: {
       type: String
