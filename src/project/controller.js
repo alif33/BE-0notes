@@ -18,7 +18,7 @@ exports.index = async(req, res) => {
 
 exports.all = async(req, res) => {
     const data = await Model.find({});
-    res.status(200).json({ data });
+    res.status(200).json({ data: data.reverse() });
 };
 
 exports.store = async(req, res) => {
