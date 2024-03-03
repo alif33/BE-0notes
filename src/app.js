@@ -28,7 +28,7 @@ app.use(cors());
 app.use(express.json());
 
 app.get("/", (req, res)=>{
-    res.send(`Server is running on port: ${process.env.PORT}`)
+    res.send(`<h1 style="text-align: center">Hello world !</h2>`)
 })
 
 app.use("/api", article);
