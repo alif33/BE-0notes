@@ -6,6 +6,10 @@ const schema = new mongoose.Schema(
       type: String,
       required: true    
     },
+    slug: { 
+      type: String,
+      required: true    
+    },
     tasks: [{
         type: mongoose.Schema.Types.ObjectId,
         ref: "Task"

@@ -1,4 +1,5 @@
 const Model = require("./index");
+const slugify = require("slugify");
 
 /*
    @crud
@@ -30,6 +31,7 @@ exports.store = async(req, res) => {
 
     const _row = new Model({
         title,
+        slug: slugify(title, "-"),
         category,
         content
     })
@@ -54,6 +56,7 @@ exports.update = async(req, res) => {
 
     const updates = {
         title,
+        slug: slugify(title, "-"),
         category,
         content
     };

@@ -1,4 +1,5 @@
 const Model = require("./index");
+const slugify = require("slugify");
 
 /*
    @crud
@@ -22,11 +23,12 @@ exports.all = async(req, res) => {
 
 exports.store = async(req, res) => {
     const { 
-        title
+        title,
     } = req.body;
 
     const _row = new Model({
-        title
+        title,
+        slug: slugify(title, "-"),
     })
 
     const data = await _row.save();
